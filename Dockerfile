@@ -1,4 +1,4 @@
-FROM ros:melodic-perception-bionic
+FROM ros:melodic-ros-base
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
@@ -31,11 +31,6 @@ RUN apt-get update \
     eog \
  && rm -rf /var/lib/apt/lists/*
 
-# nvidia-container-runtime
-ENV NVIDIA_VISIBLE_DEVICES \
-        ${NVIDIA_VISIBLE_DEVICES:-all}
-ENV NVIDIA_DRIVER_CAPABILITIES \
-        ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics,compat32,utility
 
 ADD /scripts /scripts
 

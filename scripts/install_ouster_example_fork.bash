@@ -7,7 +7,7 @@ source $SCRIPT_DIR/identify_environment.bash
 if [ ! -d "$HOME/catkin_ws/src/ouster_example" ]; then
     echo "ouster_example repository not detected"
     cd "$HOME/catkin_ws/src"
-    git clone https://github.com/wilselby/ouster_example.git
+    git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/cat_dog_dhs
 #    cd "$HOME/catkin_ws"
 #    catkin build --no-status
 #    echo "Package built successfully"
@@ -16,28 +16,28 @@ else
 fi
 
 # Building the Sample Client
-echo "building the sample client"
-cd $HOME/catkin_ws/src/ouster_example/ouster_client
-mkdir build
-cd build
-cmake ..
-make
-echo "sample client built successfully"
+#echo "building the sample client"
+#cd $HOME/catkin_ws/src/ouster_example/ouster_client
+#mkdir build
+#cd build
+#cmake ..
+#make
+#echo "sample client built successfully"
 
 # Building the Visualizer
-echo "building the visualizer"
-cd $HOME/catkin_ws/src/ouster_example/ouster_viz
-mkdir build
-cd build
-cmake ..
-make
-echo "visualizer built successfully"
+#echo "building the visualizer"
+#cd $HOME/catkin_ws/src/ouster_example/ouster_viz
+#mkdir build
+#cd build
+#cmake ..
+#make
+#echo "visualizer built successfully"
 
 #Building the Sample ROS Node
-echo "building the sample ROS node"
-cd $HOME/catkin_ws
-catkin_make
-echo "built the sample ROS node"
+#echo "building the sample ROS node"
+#cd $HOME/catkin_ws
+#catkin_make
+#echo "built the sample ROS node"
 
 # Source the workspace
 source $HOME/catkin_ws/devel/setup.bash

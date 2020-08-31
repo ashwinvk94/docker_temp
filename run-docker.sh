@@ -1,7 +1,7 @@
 #!/bin/bash
 
 xhost +local:root
-IMG=wilselby/ouster_example:latest
+IMG=ashwinvk94/base:rpi
 
 # If NVIDIA is present, use Nvidia-docker
 if test -c /dev/nvidia0
