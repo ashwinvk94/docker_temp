@@ -34,4 +34,4 @@ RUN apt-get update \
 
 ADD /scripts /scripts
 
-RUN bash /scripts/install_scripts_for_docker.bash
+RUN bash /scripts/install_ros_dependencies.bash
