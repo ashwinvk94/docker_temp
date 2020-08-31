@@ -25,6 +25,8 @@ install_catkin_tools()
         sudo apt-get -qq install python-catkin-tools > /dev/null
         echo "Catkin tools installed successfully."
     fi
+    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+    echo "~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 }
 
 create_catkin_ws()
@@ -41,6 +43,7 @@ create_catkin_ws()
         catkin_make
         echo "Catkin workspace created successfully."
     fi
+
 }
 
 main
