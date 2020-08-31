@@ -23,6 +23,8 @@ create_catkin_ws()
         cd "$HOME/catkin_ws"
         echo "Catkin workspace created successfully."
     fi
+    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+    echo "~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 }
 

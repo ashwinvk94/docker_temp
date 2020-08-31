@@ -11,8 +11,6 @@ else
     sudo apt-get -qq install python-catkin-tools > /dev/null
     echo "Catkin tools installed successfully."
 fi
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-echo "~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # get UBUNTU_CODENAME, ROS_DISTRO, REPO_DIR, CATKIN_DIR
@@ -29,7 +27,8 @@ sudo apt-get -qq update
 echo "Installing additional ROS $ROS_DISTRO packages ..."
 
 #sudo apt-get -qq install ros-$ROS_DISTRO-rviz ros-$ROS_DISTRO-gazebo-* ros-$ROS_DISTRO-joint-state-publisher ros-$ROS_DISTRO-robot-state-publisher ros-$ROS_DISTRO-xacro ros-$ROS_DISTRO-controller-manager ros-$ROS_DISTRO-joint-state-controller ros-$ROS_DISTRO-ros-control > /dev/null
-sudo apt-get -qq install ros-$ROS_DISTRO-rviz ros-$ROS_DISTRO-tf2-*  ros-$ROS_DISTRO-tf-*  ros-$ROS_DISTRO-mavros-* > /dev/null
+sudo apt-get -qq install ros-$ROS_DISTRO-rviz ros-$ROS_DISTRO-tf2-*  ros-$ROS_DISTRO-tf-*  ros-$ROS_DISTRO-mavros-* \
+	tmux vim > /dev/null
 
 source /opt/ros/$ROS_DISTRO/setup.bash
 
